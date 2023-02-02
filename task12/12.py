@@ -4,3 +4,27 @@
 # произведение P. Помогите Кате отгадать задуманные Петей числа.  
 # 4 4 -> 2 2  
 # 5 6 -> 2 3
+
+from random import randint
+from math import sqrt
+import os
+os.system('cls')
+
+
+X = randint(1,10)
+Y = randint(1,10)
+S = X + Y
+P = X*Y
+
+print(f"Сумма чисел: {S}, умножение чисел: {P}")
+
+D = S*S - 4*P       # Решение задачи через дискриминант
+if D > 0 :
+    sqr = sqrt(D) / 2
+    param = S/2
+    x1 = round(param - sqr)
+    x2 = round(param + sqr)
+print()
+print(f"Результат: {x1} и {x2}")
+input("Нажмите Enter чтобы узнать заданые числа...")
+print(f"Начальные числа: {Y} и {X}")
